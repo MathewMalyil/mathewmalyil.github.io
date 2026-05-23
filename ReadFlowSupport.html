@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReadFlow Speed Reader Support</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f5f0;
+      --text: #171717;
+      --muted: #5f6368;
+      --card: rgba(255, 255, 255, 0.78);
+      --border: rgba(20, 20, 20, 0.10);
+      --accent: #2f6fed;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #090b12;
+        --text: #f5f7fb;
+        --muted: #b4bac5;
+        --card: rgba(255, 255, 255, 0.08);
+        --border: rgba(255, 255, 255, 0.14);
+        --accent: #79b8ff;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(47, 111, 237, 0.16), transparent 32rem),
+        radial-gradient(circle at bottom right, rgba(133, 92, 255, 0.14), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    main {
+      width: min(780px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 72px 0;
+    }
+
+    header {
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 8px 0 10px;
+      font-size: clamp(2.35rem, 7vw, 4.5rem);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .intro {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 640px;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      margin: 14px 0;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      margin: 0 0 8px;
+    }
+
+    p, li {
+      color: var(--muted);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 22px;
+    }
+
+    a {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">Support</div>
+      <h1>ReadFlow Speed Reader</h1>
+      <p class="intro">Help, troubleshooting, and contact information for ReadFlow Speed Reader.</p>
+    </header>
+
+    <section>
+      <h2>About the App</h2>
+      <p>ReadFlow Speed Reader helps you read your own content with focused reading modes, speed controls, OCR, file import, clipboard reading, and Safari sharing.</p>
+    </section>
+
+    <section>
+      <h2>Supported Inputs</h2>
+      <ul>
+        <li>PDF files</li>
+        <li>TXT, RTF, Markdown, HTML, and DOCX documents</li>
+        <li>Copied or pasted text</li>
+        <li>Web article links</li>
+        <li>Safari shared pages</li>
+        <li>Screenshots and photos containing readable text</li>
+        <li>Camera scans of printed text</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How to Import Content</h2>
+      <ul>
+        <li>Use <strong>Import File</strong> to choose a document from Files.</li>
+        <li>Use <strong>Scan Text</strong> to capture printed text with the camera.</li>
+        <li>Use <strong>Screenshot</strong> to extract text from an image.</li>
+        <li>Use <strong>Paste Text</strong> to open clipboard text in reader mode.</li>
+        <li>Use <strong>Web Link</strong> or Safari Share to import readable article text.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Troubleshooting</h2>
+      <ul>
+        <li>If OCR finds no text, try a clearer image with good lighting and sharper text.</li>
+        <li>If a web article cannot be imported, the website may block article extraction or require login.</li>
+        <li>If a document cannot be read, try exporting it as PDF, TXT, RTF, Markdown, or HTML.</li>
+        <li>If Safari Share does not appear, restart the device and confirm the app is installed.</li>
+        <li>If the reader opens blank content, try importing a different file or paste the text directly.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Privacy and Content</h2>
+      <p>ReadFlow Speed Reader is designed for user-provided content. It does not distribute copyrighted books. OCR and reading workflows are processed locally where possible.</p>
+      <p style="margin-top: 10px;"><a href="https://mathewmalyil.github.io/ReadFlowPrivacyPolicy.html">View Privacy Policy</a></p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>For support, questions, or feedback, contact:</p>
+      <p style="margin-top: 10px;"><strong>malyilmathew@icloud.com</strong></p>
+    </section>
+
+    <footer>
+      ReadFlow Speed Reader support page.
+    </footer>
+  </main>
+</body>
+</html>
