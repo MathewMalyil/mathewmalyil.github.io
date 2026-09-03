@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Malakh</title>
+    <style>
+        :root {
+            --primary-color: #0d47a1;
+            --text-color: #212121;
+            --bg-color: #fafafa;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid var(--border-color);
+        }
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: var(--primary-color);
+            margin-top: 24px;
+        }
+        .meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 24px;
+        }
+        .guide-step {
+            background: #f0f4f9;
+            padding: 16px;
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 16px;
+            border-radius: 0 4px 4px 0;
+        }
+        .guide-step h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Malakh Support & Help Center</h1>
+        <div class="meta">
+            <strong>Application:</strong> Malakh (Android)<br>
+            <strong>Developer:</strong> Mathew Malyil<br>
+            <strong>Contact Support:</strong> <a href="mailto:malyilmathew@gmail.com">malyilmathew@gmail.com</a>
+        </div>
+
+        <p><strong>Malakh</strong> is an offline nearby communication application. Core nearby messaging operates directly between nearby devices using Bluetooth Low Energy (BLE) and does not require an internet connection, mobile data, or central servers.</p>
+
+        <h2>Troubleshooting Nearby Connections</h2>
+
+        <div class="guide-step">
+            <h3>1. Grant Nearby Permissions</h3>
+            <p>Ensure Malakh has permission to scan, connect, and advertise nearby devices in your Android system settings (Settings &gt; Apps &gt; Malakh &gt; Permissions). On Android 11 and earlier, Location permission is required by Android for Bluetooth scanning.</p>
+        </div>
+
+        <div class="guide-step">
+            <h3>2. Verify Bluetooth is Enabled</h3>
+            <p>Confirm that Bluetooth is turned ON on both devices. Toggling Bluetooth OFF and ON can assist if nearby devices are not immediately discovered.</p>
+        </div>
+
+        <div class="guide-step">
+            <h3>3. Keep Both Apps Open</h3>
+            <p>For optimal discovery and message exchange in the current release, keep Malakh open and active on the screen on both participating devices.</p>
+        </div>
+
+        <div class="guide-step">
+            <h3>4. Emoji SAS Verification</h3>
+            <p>When connecting to a peer, compare the Short Authentication String (SAS) represented by matching emojis on both screens. Verifying that the emojis match helps confirm the intended peer and detect possible interception.</p>
+        </div>
+
+        <h2>Contact Support</h2>
+        <p>For questions or assistance with Malakh, please contact:</p>
+        <p><strong>Support Email:</strong> <a href="mailto:malyilmathew@gmail.com">malyilmathew@gmail.com</a></p>
+
+        <div class="footer">
+            <p>&copy; 2026 Mathew Malyil. All rights reserved. | <a href="malakh-privacy.html">Privacy Policy</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Malakh</title>
+    <style>
+        :root {
+            --primary-color: #0d47a1;
+            --text-color: #212121;
+            --bg-color: #fafafa;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid var(--border-color);
+        }
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: var(--primary-color);
+            margin-top: 24px;
+        }
+        .meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 24px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy for Malakh</h1>
+        <div class="meta">
+            <strong>Effective Date:</strong> September 3, 2026<br>
+            <strong>Developer:</strong> Mathew Malyil<br>
+            <strong>Contact:</strong> <a href="mailto:malyilmathew@gmail.com">malyilmathew@gmail.com</a>
+        </div>
+
+        <h2>1. Overview</h2>
+        <p><strong>Malakh</strong> is an offline nearby communication application. Its core messaging operates directly between nearby devices without requiring an internet connection or developer-operated central messaging server.</p>
+
+        <h2>2. Data Handling and Messaging</h2>
+        <ul>
+            <li><strong>No Accounts:</strong> Malakh does not require user accounts, phone numbers, or email sign-ins.</li>
+            <li><strong>No Central Servers:</strong> The developer does not operate a server that receives your messages, peer identities, contacts, analytics, or advertising data.</li>
+            <li><strong>No Analytics or Ads:</strong> Malakh contains no advertising SDKs, tracking pixels, or analytics trackers.</li>
+            <li><strong>Local Content Storage:</strong> User-created message content is stored locally on the sender and recipient devices in Android-protected application storage.</li>
+            <li><strong>Peer Communication:</strong> Messages are transmitted directly to the selected nearby device using Bluetooth Low Energy (BLE). The selected recipient necessarily receives the message and the associated authentication information required for communication.</li>
+            <li><strong>Recipient Device Autonomy:</strong> Data delivered to another user's device is controlled independently by that device's user.</li>
+        </ul>
+
+        <h2>3. Security and Authentication</h2>
+        <ul>
+            <li><strong>Authenticated Encryption:</strong> Message content transmitted after a secure peer session is established is protected using authenticated encryption.</li>
+            <li><strong>Session Establishment:</strong> Connection establishment exchanges cryptographic identity and verification information necessary to establish a session.</li>
+            <li><strong>Emoji SAS Verification:</strong> Users verify a Short Authentication String (SAS) represented by matching emojis to help confirm the intended peer and detect possible interception.</li>
+            <li><strong>Public Identifiers:</strong> Public identity information and cryptographic fingerprints may be exchanged with the selected peer for mutual authentication.</li>
+            <li><strong>Private Keys:</strong> Private identity-key material remains in Android-protected local storage on your device and is not transmitted to the developer.</li>
+        </ul>
+
+        <h2>4. Device Permissions</h2>
+        <ul>
+            <li><strong>Bluetooth Permissions:</strong> Nearby Bluetooth permissions (Scan, Connect, Advertise) are used for peer discovery, advertising, connection, and direct communication.</li>
+            <li><strong>Legacy Location Requirement:</strong> On Android 11 (API level 30) and earlier, Android OS requires Location permission for Bluetooth LE scanning. Malakh uses BLE scan results exclusively to discover nearby peer radios and does not derive, record, or retain physical location.</li>
+            <li><strong>Unrequested Permissions:</strong> Malakh does not request contacts, microphone, camera, or shared external media storage permissions.</li>
+        </ul>
+
+        <h2>5. Retention and Data Deletion</h2>
+        <ul>
+            <li><strong>Data Retention:</strong> Local information remains in protected application storage until removed.</li>
+            <li><strong>Deletion Controls:</strong> Data can be cleared locally by clearing app data in Android system settings or by uninstalling the application. Clearing local data removes the local copy on your device, but does not remove copies previously delivered to another user's device.</li>
+            <li><strong>No Data Sales:</strong> No data is sold or provided to advertisers, analytics companies, or data brokers.</li>
+        </ul>
+
+        <h2>6. Security Measures and Children's Privacy</h2>
+        <ul>
+            <li><strong>Security:</strong> Malakh employs reasonable cryptographic and technical measures to secure local data and peer sessions.</li>
+            <li><strong>Children's Privacy:</strong> Malakh is a general communication app and is not specifically directed to children.</li>
+        </ul>
+
+        <h2>7. Updates and Contact</h2>
+        <p>This privacy policy may be updated periodically. Updates will be reflected by updating the effective date above. For questions regarding this policy, please contact <a href="mailto:malyilmathew@gmail.com">malyilmathew@gmail.com</a>.</p>
+
+        <div class="footer">
+            <p>&copy; 2026 Mathew Malyil. All rights reserved. | <a href="malakh-support.html">Malakh Support</a></p>
+        </div>
+    </div>
+</body>
+</html>
