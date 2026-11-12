@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,7 +120,7 @@
             September 3, 2026<br>
 
             <strong>Last Updated:</strong>
-            October 29, 2026<br>
+            November 12, 2026<br>
 
             <strong>Developer:</strong>
             Mathew Malyil<br>
@@ -133,60 +132,48 @@
         </div>
 
         <div class="security-notice">
-            <h2>Important Security Notice - Version 1.0.2</h2>
+            <h2>Important Security Update — Malakh 1.0.5 and Earlier Versions</h2>
 
             <p>
-                We have identified a security limitation
-                affecting contact verification in the
-                currently published version of Malakh
-                (version 1.0.2).
+                <strong>Version 1.0.5 includes improvements to peer authentication,
+                contact verification, secure session handling, and reliable Bluetooth
+                message delivery.</strong> These improvements have undergone developer
+                testing, including physical-device tests. Malakh has not undergone
+                an independent third-party security audit.
             </p>
 
             <p>
-                <strong>
-                    Matching verification emojis do not
-                    reliably confirm the identity of the
-                    person or device you are communicating
-                    with.
-                </strong>
+                <strong>Warning for version 1.0.2:</strong> Matching verification emojis
+                in that earlier version do not reliably establish the identity of
+                another person or device. Different identities or sessions can
+                produce matching symbols, and earlier trusted-contact/session
+                authorization had limitations. A nearby active attacker could
+                potentially impersonate a contact during connection establishment.
+                Encryption by itself does not remove that risk.
             </p>
 
             <p>
-                Different identities and communication
-                sessions may produce the same verification
-                symbols. We have also identified limitations
-                in how verification approvals and trusted
-                contact information are associated with
-                active communication sessions.
+                If you are still using version 1.0.2, do not treat matching emojis
+                or an existing trusted-contact indicator as conclusive proof of
+                identity. We recommend avoiding sensitive or confidential
+                communications through that version.
             </p>
 
             <p>
-                As a result, a nearby active attacker could
-                potentially impersonate a contact during
-                connection establishment. Encryption alone
-                does not eliminate this identity-verification
-                risk.
+                <strong>Recommended action:</strong> Update <strong>both devices</strong>
+                to Malakh 1.0.5 or later through Google Play when the update is
+                available. Carefully compare the verification information displayed
+                on both devices before approving a contact. Older and newer versions
+                may not be able to connect to one another; do not bypass security
+                checks to force a connection.
             </p>
 
             <p>
-                <strong>
-                    Until these issues are corrected and
-                    validated, users should not rely on
-                    matching emojis or existing trusted
-                    contact indicators as conclusive proof
-                    of identity. We recommend avoiding
-                    sensitive or confidential communications
-                    through this version of Malakh.
-                </strong>
-            </p>
-
-            <p>
-                We are working on security improvements.
-                No particular incident of unauthorized
-                message interception has been established
-                by our investigation to date.
-                This notice does not promise a specific
-                security-update release date.
+                The protections available depend on the version actually installed
+                on each device. Updating this policy does not upgrade the app or
+                resolve vulnerabilities in older installed versions. No confirmed
+                incident of unauthorized message interception has been established
+                in the developer's investigation to date.
             </p>
         </div>
 
@@ -201,10 +188,9 @@
         </p>
 
         <p>
-            This policy describes how Malakh handles
-            information, its technical security measures,
-            and the known limitations affecting the
-            currently published version.
+            This policy describes how Malakh handles information,
+            the security features and limitations of different
+            versions, and the choices available to users.
         </p>
 
         <h2>2. Data Handling and Messaging</h2>
@@ -225,9 +211,9 @@
 
             <li>
                 <strong>No Analytics or Ads:</strong>
-                The currently published application
-                contains no advertising SDKs, tracking
-                pixels, or analytics trackers.
+                Malakh does not include advertising SDKs,
+                tracking pixels, or analytics trackers
+                in the release described by this policy.
             </li>
 
             <li>
@@ -271,72 +257,57 @@
         <ul>
             <li>
                 <strong>Message Encryption:</strong>
-                Malakh uses authenticated encryption
-                mechanisms to protect message content
-                during established encrypted peer
-                sessions. This does not independently
-                guarantee that the intended recipient
-                has been correctly authenticated.
+                Malakh uses authenticated encryption to protect message content
+                during established secure peer sessions. Encryption does not,
+                by itself, prove that the peer is the person you intend to contact.
             </li>
 
             <li>
-                <strong>Session Establishment:</strong>
-                Connection establishment exchanges
-                cryptographic identity and handshake
-                information needed for nearby
-                communication.
+                <strong>Peer Authentication and Verification:</strong>
+                Version 1.0.5 includes changes to cryptographic identity
+                authentication and binds verification approvals to current
+                authenticated peer/session information. Users should compare
+                the verification information displayed on both devices before
+                approving a new or re-verified contact.
             </li>
 
             <li>
-                <strong>Emoji Verification Limitation:</strong>
-                Version 1.0.2 displays a Short
-                Authentication String (SAS) using
-                emojis. We have identified that these
-                displayed symbols are not reliably
-                bound to the complete authenticated
-                identity and session information.
-                Matching emojis must therefore not
-                be treated as reliable proof of the
-                other party's identity or as assurance
-                against interception.
+                <strong>Older-Version Verification Warning:</strong>
+                In version 1.0.2, the emoji-based Short Authentication String
+                (SAS) is not reliably bound to the complete authenticated
+                identity and session. Matching emojis in that version must not
+                be relied on as trustworthy proof of a peer's identity.
             </li>
 
             <li>
-                <strong>Trusted Contact Limitations:</strong>
-                The currently published version has
-                known limitations concerning how
-                verification approval and stored trust
-                are associated with specific sessions.
-                A trusted or verified status should
-                not be treated as an absolute security
-                guarantee.
+                <strong>Legacy Contacts and Changed Identities:</strong>
+                Contacts carried forward from older versions may require a new
+                verification comparison before trusted communication resumes.
+                If another device presents a different cryptographic identity,
+                Malakh may treat it as a new contact and create a separate
+                conversation rather than automatically attach old history or trust.
             </li>
 
             <li>
                 <strong>Public Identifiers:</strong>
-                Public identity information and
-                cryptographic public-key information
-                may be exchanged between devices
-                during communication.
+                Public identity information and cryptographic public keys may
+                be exchanged between devices during connection establishment.
             </li>
 
             <li>
                 <strong>Private Keys:</strong>
-                Private identity-key material is
-                intended to remain in Android-protected
-                storage on the user's device and is
-                not transmitted to a developer-operated
-                messaging server.
+                Private identity-key material is intended to remain protected
+                on the user's Android device and is not sent to a
+                developer-operated messaging server.
             </li>
 
             <li>
-                <strong>Security Limitations:</strong>
-                No communication application can
-                guarantee absolute protection.
-                Users should consider the known
-                verification limitations described
-                in the security notice above when
-                deciding what information to share.
+                <strong>Security Testing and Limitations:</strong>
+                Version 1.0.5 has been tested by the developer, including
+                security-related automated tests and physical-device messaging
+                tests. It has not received an independent third-party security
+                audit. No software can guarantee absolute protection, and Malakh
+                must not be relied on for emergency communications.
             </li>
         </ul>
 
@@ -364,11 +335,9 @@
 
             <li>
                 <strong>Unrequested Permissions:</strong>
-                The currently published Malakh application
-                does not request contacts, microphone,
-                camera, or shared external media storage
-                permissions for its core messaging
-                functionality.
+                The Malakh messaging functionality described here
+                does not require contacts, microphone, camera, or
+                shared external media storage permissions.
             </li>
         </ul>
 
@@ -383,18 +352,20 @@
 
             <li>
                 <strong>Deletion Controls:</strong>
-                Data can be cleared locally through
-                Android system settings by clearing
-                Malakh's application data, or by
-                uninstalling the application.
+                Malakh 1.0.5 does not provide a dedicated in-app control for
+                deleting one individual chat. Users may remove local Malakh
+                data through Android Settings by clearing the app's storage,
+                or by uninstalling Malakh. These are broad device-level actions,
+                not single-conversation deletion controls.
             </li>
 
             <li>
                 <strong>Deletion Consequences:</strong>
-                Clearing application data may permanently
-                remove locally stored messages, identity
-                information, trusted contact records,
-                and other application information.
+                Clearing application storage or uninstalling may permanently
+                remove local messages, drafts, identity keys, trusted-contact
+                records, and other app information. A new installation may
+                generate a new cryptographic identity, and former contacts
+                may need to verify it again.
             </li>
 
             <li>
@@ -436,31 +407,28 @@
         <ul>
             <li>
                 <strong>Technical Security:</strong>
-                Malakh uses cryptographic and
-                device-local protection mechanisms.
-                These measures do not eliminate the
-                identified contact-verification and
-                trust-authorization limitations in
-                version 1.0.2.
+                Malakh uses encrypted peer sessions and device-local identity
+                protection mechanisms. Version 1.0.5 introduces improvements
+                intended to address the earlier contact-verification and
+                trust-authorization limitations documented for version 1.0.2.
+                The older version remains affected until it is updated.
             </li>
 
             <li>
-                <strong>Security Improvements:</strong>
-                Identified vulnerabilities are being
-                evaluated for correction and validation.
-                Any future security improvements apply
-                only when incorporated into an installed
-                application version.
+                <strong>Security Updates:</strong>
+                Security improvements apply only to the version installed on
+                a user's device. Both participants should use the latest
+                available compatible Malakh version and compare verification
+                information when prompted. Some older and newer versions
+                cannot communicate with one another.
             </li>
 
             <li>
                 <strong>Children's Privacy:</strong>
-                Malakh is a general communication
-                application and is not specifically
-                directed to children. Parents and
-                guardians should consider the
-                security limitations described in
-                this policy.
+                Malakh is a general communication application and is not
+                specifically directed to children. Parents and guardians
+                should consider its privacy and security limitations before
+                permitting use.
             </li>
         </ul>
 
@@ -476,9 +444,9 @@
         <p>
             Changes will be reflected by updating
             the revision date at the top of this page.
-            Updating this document does not, by itself,
-            change the security characteristics of
-            previously installed Malakh versions.
+            Updating this document does not, by itself, change the
+            security characteristics of previously installed Malakh versions.
+            Please use Google Play to obtain the latest available app update.
         </p>
 
         <p>
