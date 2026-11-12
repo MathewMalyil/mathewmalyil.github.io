@@ -55,6 +55,18 @@
             margin-top: 0;
             color: var(--primary-color);
         }
+        .notice {
+            background: #fff8f1;
+            border: 1px solid #e6ae70;
+            border-left: 5px solid #bd651b;
+            border-radius: 6px;
+            padding: 18px;
+            margin: 24px 0;
+        }
+        .notice h2 {
+            margin-top: 0;
+            color: #93470e;
+        }
         a {
             color: var(--primary-color);
             text-decoration: none;
@@ -69,47 +81,81 @@
             font-size: 0.9em;
             color: #666;
         }
+        @media (max-width: 600px) {
+            body { padding: 12px; }
+            .container { padding: 22px; }
+            .guide-step, .notice { padding: 14px; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Malakh Support & Help Center</h1>
+        <h1>Malakh Support &amp; Help Center</h1>
         <div class="meta">
             <strong>Application:</strong> Malakh (Android)<br>
+            <strong>Support page updated:</strong> November 12, 2026<br>
             <strong>Developer:</strong> Mathew Malyil<br>
-            <strong>Contact Support:</strong> <a href="mailto:malyilmathew@gmail.com">malyilmathew@gmail.com</a>
+            <strong>Contact Support:</strong>
+            <a href="mailto:malyilmathew@gmail.com">malyilmathew@gmail.com</a>
         </div>
 
-        <p><strong>Malakh</strong> is an offline nearby communication application. Core nearby messaging operates directly between nearby devices using Bluetooth Low Energy (BLE) and does not require an internet connection, mobile data, or central servers.</p>
+        <p><strong>Malakh</strong> is an offline nearby communication application. Core messaging operates directly between nearby Android devices using Bluetooth Low Energy (BLE), without mobile data, Wi-Fi internet access, or a developer-operated messaging server. Both users need Malakh installed and Bluetooth enabled, and they must remain within Bluetooth range.</p>
+
+        <div class="notice">
+            <h2>Security and Version Compatibility</h2>
+            <p><strong>Important for users of version 1.0.2:</strong> The earlier emoji-based Short Authentication String (SAS) had known contact-verification limitations. <strong>Matching emojis alone must not be treated as reliable proof of the other person's identity.</strong></p>
+            <p>Malakh 1.0.5 introduces improvements to peer authentication, verification, session establishment, and message-delivery reliability. Always compare the <strong>complete verification information shown on both devices</strong> and approve a contact only when it matches and you trust the person you are verifying.</p>
+            <p>Older Malakh versions may discover newer versions but fail to establish a compatible secure connection. <strong>Update Malakh on both phones through Google Play</strong> when the newer version is available. Do not bypass identity verification to make an incompatible connection work.</p>
+            <p>These improvements apply only to devices running the updated app. Malakh has not undergone an independent third-party security audit and should not be used for emergency communications.</p>
+        </div>
 
         <h2>Troubleshooting Nearby Connections</h2>
 
         <div class="guide-step">
             <h3>1. Grant Nearby Permissions</h3>
-            <p>Ensure Malakh has permission to scan, connect, and advertise nearby devices in your Android system settings (Settings &gt; Apps &gt; Malakh &gt; Permissions). On Android 11 and earlier, Location permission is required by Android for Bluetooth scanning.</p>
+            <p>In Android Settings &gt; Apps &gt; Malakh &gt; Permissions, allow the nearby-device permissions requested by Malakh for Bluetooth scanning, connection, and advertising. On Android 11 and earlier, Android may also require Location permission for Bluetooth scanning.</p>
         </div>
 
         <div class="guide-step">
-            <h3>2. Verify Bluetooth is Enabled</h3>
-            <p>Confirm that Bluetooth is turned ON on both devices. Toggling Bluetooth OFF and ON can assist if nearby devices are not immediately discovered.</p>
+            <h3>2. Check Bluetooth and Distance</h3>
+            <p>Turn Bluetooth ON on both phones and keep them within nearby Bluetooth range. If discovery or connection stalls, check that Bluetooth is enabled and open Malakh on both devices.</p>
         </div>
 
         <div class="guide-step">
-            <h3>3. Keep Both Apps Open</h3>
-            <p>For optimal discovery and message exchange in the current release, keep Malakh open and active on the screen on both participating devices.</p>
+            <h3>3. Use the Latest Compatible Version</h3>
+            <p>On both phones, open Google Play and check Malakh for updates. Different protocol versions may appear in the Nearby list but not connect securely. Updating both devices is preferable to repeatedly attempting a connection between incompatible versions.</p>
         </div>
 
         <div class="guide-step">
-            <h3>4. Emoji SAS Verification</h3>
-            <p>When connecting to a peer, compare the Short Authentication String (SAS) represented by matching emojis on both screens. Verifying that the emojis match helps confirm the intended peer and detect possible interception.</p>
+            <h3>4. Compare Complete Verification Information</h3>
+            <p>When Malakh asks you to verify a contact, compare the complete verification information displayed on both phones with the person physically present. Do not rely only on matching emojis from older versions. If the information differs or the identity is unexpected, do not approve the connection. A contact with a newly generated identity may require fresh verification and appear as a separate conversation.</p>
         </div>
+
+        <div class="guide-step">
+            <h3>5. If a Chat Shows Reconnecting</h3>
+            <p>Malakh can reconnect automatically after some Bluetooth interruptions, but this is not guaranteed in every situation. Allow a short period for recovery. If it remains Offline or Reconnecting, open the Nearby screen; you may need to tap Connect. After reopening the app, manual connection may be required. Keep both apps open during troubleshooting.</p>
+        </div>
+
+        <div class="guide-step">
+            <h3>6. Understand Message Delivery Indicators</h3>
+            <p>A message may be queued while a secure connection is unavailable. A single tick indicates transmission to the nearby device, not necessarily that the recipient has saved it. Double ticks indicate that Malakh has received the recipient's durable application acknowledgement. If a message remains undelivered, check both devices' connection and version status.</p>
+        </div>
+
+        <h2>Messages, Chat History, and Updates</h2>
+        <p>A normal Google Play app update is intended to retain local conversations, drafts, and identity records. For the same authenticated peer identity, Malakh is designed to reuse the existing conversation. If another phone has regenerated its cryptographic identity, it may appear as a new verified contact and have a separate conversation; the earlier history remains associated with the previous identity.</p>
+        <p><strong>Do not uninstall Malakh or clear its app data to troubleshoot a chat.</strong> Doing so may permanently remove local messages, drafts, trusted contacts, and identity information. Reinstalling is not a reliable way to recover old conversations.</p>
+
+        <h2>Deleting Local Information</h2>
+        <p>Malakh 1.0.5 does not currently provide an individual Delete Chat control. Android's Clear Storage/Clear Data option or uninstalling Malakh can remove local app information, but these actions may also remove the device's Malakh identity, trust records, and all locally stored conversations. They should not be used merely to remove one chat.</p>
+        <p>Removing local information does not delete messages already stored on another person's device. Malakh does not operate a central message database from which recipient copies can be deleted remotely.</p>
 
         <h2>Contact Support</h2>
-        <p>For questions or assistance with Malakh, please contact:</p>
-        <p><strong>Support Email:</strong> <a href="mailto:malyilmathew@gmail.com">malyilmathew@gmail.com</a></p>
+        <p>For assistance, contact <a href="mailto:malyilmathew@gmail.com">malyilmathew@gmail.com</a>. Please include your Malakh version, Android version, device model, and a description of the issue. <strong>Do not email private keys, authentication secrets, or confidential message contents.</strong></p>
 
         <div class="footer">
-            <p>&copy; 2026 Mathew Malyil. All rights reserved. | <a href="malakh-privacy.html">Privacy Policy</a></p>
+            <p>&copy; 2026 Mathew Malyil. All rights reserved. |
+                <a href="malakh-privacy.html">Privacy Policy</a>
+            </p>
         </div>
     </div>
 </body>
